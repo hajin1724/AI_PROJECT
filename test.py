@@ -13,7 +13,7 @@ model = AutoModelForSequenceClassification.from_pretrained(MODEL_DIR)
 
 model.eval()
 
-text = "슬프다"
+text = "슬퍼"
 inputs = tokenizer(
     text,
     return_tensors="pt",
@@ -29,3 +29,7 @@ with torch.no_grad():
 print("logits:", outputs.logits)
 print("감정별 확률:", probabilities.tolist())
 print("예측 클래스 번호:", torch.argmax(probabilities).item())
+
+id2label = {0: "기쁨", 1: "두려움·놀라움", 2: "슬픔", 3: "화남"}
+pred_id = torch.argmax(probabilities).item()
+print("예측 감정:", id2label[pred_id])
