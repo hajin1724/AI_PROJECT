@@ -11,12 +11,15 @@ Streamlit으로 화면을 구성하고 FastAPI로 분류 모델과 LLM 호출을
 - 언어: Python
 - 데이터 처리: pandas, numpy
 - 자연어 처리: scikit-learn (TfidfVectorizer), konlpy (Okt 형태소 분석기)
-- 모델: LogisticRegression (baseline)
+- 모델: LogisticRegression (baseline), klue-bert-base 파인튜닝
+- 딥러닝 프레임워크: PyTorch, HuggingFace transformers
 - 백엔드: FastAPI 
 - 프론트엔드: Streamlit 
 - LLM 연동: LLM API 
 - 개발 환경: VS Code, Python venv, Jupyter Notebook
 - 버전 관리: Git, GitHub
+- 배포: Docker, Render
+- 모델 저장소 관리: Git LFS (420MB 모델 업로드용)
 
 **데이터**
 - AI-Hub「감정이 태깅된 자유대화(성인)」— 성인/청소년 라벨링데이터 (텍스트 + 감정 태깅) (사용X)
@@ -62,6 +65,10 @@ Streamlit으로 화면을 구성하고 FastAPI로 분류 모델과 LLM 호출을
   - git-lfs를 이용해 klue-bert 모델(약 420MB) GitHub 저장소에 업로드
   - Render(Web Service, Docker 환경)에 배포 완료
 - 목표 : UI 버그 수정, 게임 콘텐츠(몬스터/층수/이미지) 확장, 배포 완료 ✅
+
+#### Day 05 (7.24 금) : 발표 및 마무리
+- 발표준비 및 발표
+- 보고서 작성 및 최종 결과물 제출
 
 ### [배포 링크]
 - https://ai-project-co2l.onrender.com
